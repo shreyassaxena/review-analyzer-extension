@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { 
+      width: 400px; 
+      padding: 10px; 
+      font-family: Arial, sans-serif;
+    }
+    .section { 
+      margin: 10px 0; 
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    button { 
+      margin: 10px 0;
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0052a3;
+    }
+    .loading { 
+      display: none; 
+      color: #666;
+      margin: 10px 0;
+      text-align: center;
+    }
+    #reset {
+      background: #dc3545;
+    }
+    #reset:hover {
+      background: #c82333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin: 5px 0;
+    }
+      
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .summarize-btn {
+      font-size: 12px;
+      padding: 4px 8px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .summarize-btn:hover {
+      background: #218838;
+    }
+    .summarize-btn:disabled {
+      background: #6c757d;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <button id="analyze">Analyze This Page</button>
+  <div id="loading" class="loading">
+    <p>Processing page content...</p>
+    <small>This might take a few seconds</small>
+  </div>
+  <div class="section">
+    <div class="section-header">
+      <h3>Pros:</h3>
+      <button id="summarizePros" class="summarize-btn">Summarize Pros</button>
+    </div>
+    <ul id="prosList"></ul>
+  </div>
+  <div class="section">
+    <div class="section-header">
+      <h3>Cons:</h3>
+      <button id="summarizeCons" class="summarize-btn">Summarize Cons</button>
+    </div>
+    <ul id="consList"></ul>
+  </div>
+  <button id="reset">Reset Analysis</button>
+  <script src="popup.js"></script>
+</body>
+</html>
+
